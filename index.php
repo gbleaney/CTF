@@ -15,14 +15,14 @@ if(!isset($_COOKIE[$cookie_name])) {
 
 <?php
 if($_COOKIE[$cookie_name] == "true") {
-    readfile("login.html");
+    readfile("./login.html");
 } else {
-	readfile("no_login.html");
+	readfile("./no_login.html");
 }
 ?>
 
 <p style="position: fixed; bottom: 0; width:100%; text-align: center">
-	(C) 2015 Ultra-Secure Inc. - <a href="about.html">About Us</a>
+	(C) 2015 Ultra-Secure Inc. - <a href="./about.html">About Us</a>
 </p>
 
 </body>

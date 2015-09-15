@@ -32,7 +32,7 @@
 hash = ""
 function GetHash() {
 	$.ajax({
-		url: "/get_hash.php?username=" + $("#username")[0].value,
+		url: "./get_hash.php?username=" + $("#username")[0].value,
 		success: function( data ) {
 			hash = data
 		}
