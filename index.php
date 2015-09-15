@@ -9,24 +9,22 @@ if(!isset($_COOKIE[$cookie_name])) {
 ?>
 
 <html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
 <body>
 
 <?php
 if($_COOKIE[$cookie_name] == "true") {
-    echo "<center>Welcome!</center>";
+    readfile("login.html");
 } else {
-	echo "
-		<h1>
-			<center>
-		    Ultra-Secure Website
-			</center>
-		</h1>
-		<center>
-		    Welcome to this ultra-secure website! For added security, we won't even show you a login page unless we KNOW you're allowed 
-		    to log in (and clearly YOU aren't allowed to log in).
-		</center>";
+	readfile("no_login.html");
 }
 ?>
+
+<p style="position: fixed; bottom: 0; width:100%; text-align: center">
+	(C) 2015 Ultra-Secure Inc. - <a href="about.html">About Us</a>
+</p>
 
 </body>
 </html>
