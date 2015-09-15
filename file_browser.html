@@ -1,0 +1,38 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+
+<center>
+    <form>
+		<div class="form-group">
+			<label for="password">File Name</label>
+			<input class="form-control" type='text' name='file' id='file'>
+		</div>
+		<input class="btn btn-default" type='button' value='Request File' onclick='GetFile()'>
+	</form>
+</center>
+
+<div id="output">
+
+</div>
+
+<script type="text/javascript">
+function GetFile(){
+	$.ajax({
+		url: "./get_file.php?file=" + $("#file")[0].value,
+		success: function( data ) {
+			var outputDiv = $("#output").first()
+			outputDiv.text(data)
+		}
+	});
+}
+</script>
+
+</body>
+</html>
+
+
