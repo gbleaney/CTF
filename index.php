@@ -4,7 +4,6 @@ $cookie_value = "false";
 
 if(!isset($_COOKIE[$cookie_name])) {
     setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-    echo "Setting Cookie";
 }
 ?>
 
